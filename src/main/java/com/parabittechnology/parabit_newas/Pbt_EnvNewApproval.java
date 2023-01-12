@@ -34,6 +34,22 @@ int stCode;
         {
              stCode = rec.rs.getInt("STCode");
              tableUpdate(stCode);
+             
+                 Thread myThread = new Thread(new Runnable() {
+                 @Override
+                 public void run() {
+                     try{
+                         while(true){
+                             Thread.sleep(10000);
+                         tableUpdate(stCode);
+                         }
+                     }catch(Exception e){
+                         System.out.println();
+                     }
+                 }
+             });
+             myThread.start();
+             
         }catch(Exception e){System.out.println(e);}
     }
     private void tableUpdate(int e) throws Exception // Status E Entry Will Be Fetch and further Forward to Plant Plantation Officer
@@ -115,7 +131,7 @@ int stCode;
         }
 
         jComboBox1.setFont(new java.awt.Font("Tw Cen MT", 0, 12)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Plant", "Garden", "Beach", "ferti" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

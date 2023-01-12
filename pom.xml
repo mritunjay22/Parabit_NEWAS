@@ -24,6 +24,7 @@
             <artifactId>parabit_activation_jar</artifactId>
             <version>1.4.7</version>
         </dependency>
+        
         <dependency>
             <groupId>ParabitJavaMailApi</groupId>
             <artifactId>parabit_mail_api</artifactId>

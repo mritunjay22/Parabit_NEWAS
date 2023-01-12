@@ -691,7 +691,7 @@ try
     up.setString(13,privHos.getText());
     up.setString(14,govtHos.getText());
     up.setString(15,nPolice.getText());
-    
+    System.out.println();
     FileInputStream img1 = new FileInputStream(filePath1);
     FileInputStream img2 = new FileInputStream(filePath2);
     FileInputStream img3 = new FileInputStream(filePath3);
